@@ -78,15 +78,7 @@
 				}
 				fillBar.style.width = position * 100 +'%';
         });    
-    
-		
-        document.getElementById("seek-bar").addEventListener('click', function(event){
-        alert(event.clientX + " "+ " " + event.target.offsetLeft);
-        var clickedPosition =  (event.clientX - event.target.offsetLeft);
-        //alert(song.duration + " "+ event.clientX);
-        song.currentTime= (clickedPosition / event.target.offsetWidth) * (song.duration);
-        },
-        false);
+   
 
 
         function next(){
