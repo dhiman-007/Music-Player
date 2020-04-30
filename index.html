@@ -21,7 +21,7 @@
                     <button id="next" onclick="next()"><img src="buttons/Next.png" height="90%" width="90%"/></button>
                 </div>
                 
-                <div id="seek-bar">
+                <div id="seek-bar" min="0" max="100" value="0">
                     <div id="fill"></div>
                     <div id="handle"></div>
                 </div>
@@ -31,11 +31,19 @@
     <script type="text/javascript">
     
         var songs = ["music/Sooraj-dooba-hai-remix.mp3",
-		"music/Daru-badnam-remix.mp3","music/Rock-on-title-song.mp3"
-		];  
-		
-        var poster = ["images/Poster1.jpg","images/Poster2.jpg","images/Poster3.jpg"
-		];
+		    "music/Daru-badnam-remix.mp3","music/Rock-on-title-song.mp3","music/woh-lamhe-woh-baatein.mp3","music/I-Like-Me-Better.mp3"
+		    ];  
+		//created a dynamic array according to the number of Songs, After every 3 images 
+		//I loop again to the first image, It reduces manually entering background images for songs
+        
+        var poster = new Array();
+	    var c=0;
+		for(var i=0;i<songs.length;i++){
+			if(i%3==0){
+				c = 0;
+			}
+			poster.push("images/Poster"+(++c)+".jpg");
+		}
 		
 		var songTitle = document.getElementById("songTitle");
         var fillBar = document.getElementById("fill");
@@ -43,7 +51,7 @@
         var song = new Audio();  // creating Audio class objetc
         var currentSong = 0;
         
-        window.onload = playSong;   
+        window.onload = playSong;  
         
         function playSong(){
 				song.src = songs[currentSong];
@@ -63,7 +71,7 @@
             }
         }
         
-        song.addEventListener('timeupdate',function(){ 
+        song.addEventListener('timeupdate', function(){ 
 				let position = song.currentTime / song.duration;
 				if(position*100==100){
 					next(); //calling the function next() to play next song automatically after completion of current song.
@@ -71,9 +79,18 @@
 				fillBar.style.width = position * 100 +'%';
         });    
     
+		
+        document.getElementById("seek-bar").addEventListener('click', function(event){
+        alert(event.clientX + " "+ " " + event.target.offsetLeft);
+        var clickedPosition =  (event.clientX - event.target.offsetLeft);
+        //alert(song.duration + " "+ event.clientX);
+        song.currentTime= (clickedPosition / event.target.offsetWidth) * (song.duration);
+        },
+        false);
+
+
         function next(){
-            
-            currentSong++;
+            currentSong++; 
             if(currentSong > (songs.length-1)){   
 			// if Queue of songs is completed, set the currentSong to first song of Queue.
                 currentSong = 0;

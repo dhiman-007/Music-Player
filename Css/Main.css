@@ -1,6 +1,7 @@
 body{
-    margin: 0px;
+    margin:  0px;
     padding: 0px;
+	height:  100vh;
 }
 #bg{
     height: 100vh;
@@ -11,7 +12,7 @@ body{
 #bg img{
     height: 120vh;
     width: 105%;
-    -webkit-filter:blur(30px);
+    -webkit-filter:blur(4px);
     position: absolute;
     top:50%;
     left: 50%;
@@ -103,6 +104,7 @@ body{
     margin-left: 25px;
     cursor: pointer;
 }
+
 #fill{
     height: 5px;
     background-color:#eb3434;
@@ -116,10 +118,6 @@ body{
     margin-left: -5px;
     transform: scale(2);
 }
-
-
-
-
 
 
 
