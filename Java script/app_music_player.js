@@ -5,12 +5,14 @@
 		//I loop again to the first image, It reduces manually entering background images for songs
         
         var poster = new Array();
-	    var c=0;
+	    var c=0,j=0;
 		for(var i=0;i<songs.length;i++){
 			if(i%3==0){
 				c = 0;
+				j=c;
 			}
-			poster.push("images/Poster"+(++c)+".jpg");
+
+			poster.push("images/Poster"+(++j)+".jpg");
 		}
 		
 		var songTitle = document.getElementById("songTitle");
@@ -18,7 +20,8 @@
         
         var song = new Audio();  // creating Audio class objetc
         var currentSong = 0;
-        
+       
+	//
         window.onload = playSong;  
         
         function playSong(){
