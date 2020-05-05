@@ -15,7 +15,7 @@
 
 ### Fetching Of Songs:
 
-* Used an **Array** of Object where every Object holds the **Path** for the song to be played, as shown below: 
+* Used an **Array** where every value holds the **Path** for the song to be played, as shown below: 
 	```
 	 var songs = ["music/Sooraj-dooba-hai-remix.mp3",
 	 "music/Daru-badnam-remix.mp3","music/Rock-on-title-song.mp3","music/woh-lamhe-woh-baatein.mp3","music/I-Like-Me-Better.mp3"
