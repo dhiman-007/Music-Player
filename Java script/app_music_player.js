@@ -1,4 +1,4 @@
-  var songs = ["music/Sooraj-dooba-hai-remix.mp3",
+  var songs = ["music/Let em play Karan aujla.mp3","music/Sooraj-dooba-hai-remix.mp3",
 		    "music/Daru-badnam-remix.mp3","music/Rock-on-title-song.mp3","music/woh-lamhe-woh-baatein.mp3","music/I-Like-Me-Better.mp3"
 		    ];  
 		//created a dynamic array according to the number of Songs, After every 3 images 
