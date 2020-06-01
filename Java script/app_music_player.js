@@ -31,7 +31,7 @@
 				song.play();
         }
         
-        function playOrPauseSong(){
+        const playOrPauseSong =()=>{
 			if(song.paused){
                 song.play();
                 $("#play img").attr("src","buttons/Pause.png");
@@ -52,7 +52,7 @@
    
 
 
-        function next(){
+        const next = () =>{
             currentSong++; 
             if(currentSong > (songs.length-1)){   
 			// if Queue of songs is completed, set the currentSong to first song of Queue.
@@ -64,7 +64,7 @@
             $("#bg img").attr("src",poster[currentSong]);
         }
     
-        function pre(){
+        const pre = () =>{
             currentSong--;
             if(currentSong < (0)){
 				
