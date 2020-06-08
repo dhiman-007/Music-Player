@@ -17,7 +17,7 @@ function fill() {
         if (ind % 3 == 0) {
             j = 0
         }
-        return "images/poster" + (++j) + ".jpg"
+        return "images/Poster" + (++j) + ".jpg"
     })
 }
 
