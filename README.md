@@ -43,7 +43,7 @@
 * function for Handling of Play and Pause of songs
 
 ```
-	 function playOrPauseSong(){
+	 const playOrPauseSong =()=>{
 			if(song.paused){
                 song.play();
                 $("#play img").attr("src","buttons/Pause.png");
@@ -58,10 +58,10 @@
 * function for Next song to play :
 
 ```
-	function next(){
+	const next = () =>{
             currentSong++; 
             if(currentSong > (songs.length-1)){   
-			// if Queue of songs is completed, set the currentSong to FIRST song of Queue.
+			// if Queue of songs is completed, set the currentSong to first song of Queue.
                 currentSong = 0;
             }
             playSong();
@@ -74,10 +74,10 @@
 * function for Previous song to play:
 
 ```
-	   function pre(){
+	   const pre = () =>{
             currentSong--;
             if(currentSong < (0)){
-		// if Queue of songs is completed, set the currentSong to LAST song of Queue.	
+				
                 currentSong = songs.length-1;
             }
             playSong();
@@ -85,6 +85,7 @@
             $("#image img").attr("src",poster[currentSong]);
             $("#bg img").attr("src",poster[currentSong]);
         }
+
 ```
 
 #### Logic for automatically shift to the **first poster** after every 3 songs, which was done manually before.
