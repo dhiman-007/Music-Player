@@ -1,6 +1,6 @@
 
 
-let songs = ["Let em play Karan aujla.mp3",
+let songs = ["Let em play Karan aujla.mp3","Sheikh  Karan Aujla.mp3","East Side Flow - Sidhu Moose Wala.mp3",
     "Sooraj-dooba-hai-remix.mp3",
     "Daru-badnam-remix.mp3",
     "Rock-on-title-song.mp3",
@@ -19,6 +19,8 @@ function fill() {
         }
         return "images/Poster" + (++j) + ".jpg"
     })
+
+    document.getElementById('number').innerHTML=1 +' / '+songs.length
 	
 }
 
@@ -58,8 +60,8 @@ document.getElementById("my-audio").addEventListener('ended', ()=>{
 const bomb = (songName, ind) => {
 	console.log(pics)
     document.getElementById("my-audio").setAttribute('src', 'music/' + songName)
-    document.getElementById('songTitle').innerHTML = "dMAN" + '<br/><br/>' + songName.substring(0, songName.length - 4);
-	console.log(pics[ind])
+    document.getElementById('songTitle').innerHTML = "d'MAN" + '<br/><br/>' + songName.substring(0, songName.length - 4);
+    document.getElementById('number').innerHTML=i+1+' / '+songs.length
     $("#bg img").attr("src", pics[ind]);
 
 }
