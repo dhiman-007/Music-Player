@@ -19,13 +19,13 @@ body{
     transform: translate(-50%,-50%);
     z-index: 1;
 }
-#blackLayer{
+/* #blackLayer{
     height: 100vh;
     width: 100%;
     background-color: rgba(0,0,0,.2);
     position: absolute;
     z-index: 99;
-}
+} */
 #main{
     width: 25%;
     background-color:#fff;
@@ -66,11 +66,11 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
 }
-#play,#next,#pre{
+#next,#pre{
     width: 50px;
     height: 50px;
     border: 0;
-    background-color:#eb3434;
+    background-color:black;
     border-radius: 50%;
     outline: none;
     cursor: pointer;
@@ -89,35 +89,14 @@ body{
     height: 30px;
     left: 30%;
 }
-#play img,#next img,#pre img{
+#next img,#pre img{
     position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
-#seek-bar{
-    width: 250px;
-    height: 5px;
-    background-color:gray;
-    display: flex;
-    border-radius: 50px;
-    margin-left: 25px;
-    cursor: pointer;
-}
 
-#fill{
-    height: 5px;
-    background-color:#eb3434;
-    border-radius: 20px;
-}
-#handle{
-    width: 8px;
-    height: 8px;
-    background-color:#eb3434;
-    border-radius: 50%;
-    margin-left: -5px;
-    transform: scale(2);
-}
+
 
 
 

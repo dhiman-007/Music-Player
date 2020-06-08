@@ -1,33 +1,47 @@
 <html>
-    <head>
-        <link href="Css/Main.css" rel="stylesheet"/>
-        <script src="Css/jquery-1.10.2.min.js"></script>
-    </head>
-    <body>
-        <div id="bg">
-            <div id="blackLayer"></div>
-            <img src="images/Poster1.jpg"/>
+
+<head>
+    <link href="Css/Main.css" rel="stylesheet" />
+    <script src="Css/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+    <div id="bg">
+        <div id="blackLayer"></div>
+        <img src="images/Poster1.jpg" />
+    </div>
+
+    <div id="main">
+        <div id="image">
+            <img src="images/move6.gif" />
         </div>
-       
-        <div id="main">
-            <div id="image">
-                <img src="images/Poster1.jpg"/>
+        <div id="player">
+
+            <div id="songTitle" style="position: absolute; top: 220px; font-size: 15px; font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: 600;
+                ">
+                Let em play</div>
+            <br /><br />
+            <div id="buttons">
+                <button id="pre" onclick="pre()"><img src="buttons/Pre.png" height="80%" width="80%" /></button>
+                <button id="next" onclick="next()"><img src="buttons/Next.png" height="80%" width="80%" /></button>
             </div>
-            <div id="player">
-                <div id="songTitle">Demo</div>
-                <div id="buttons">
-                    <button id="pre" onclick="pre()"><img src="buttons/Pre.png" height="90%" width="90%"/></button>
-                    <button id="play" onclick="playOrPauseSong()"><img src="buttons/Play.png"/></button>
-                    <button id="next" onclick="next()"><img src="buttons/Next.png" height="90%" width="90%"/></button>
-                </div>
-                
-                <div id="seek-bar" min="0" max="100" value="0">
-                    <div id="fill"></div>
-                    <div id="handle"></div>
-                </div>
+
+            <div id="bajao" style="height: 80px; width: 250px; ">
+                <audio id="my-audio" style="width: 90%; position: absolute; left: 20px;" controls autoplay loop
+                    src="music/Let em play Karan aujla.mp3" type="audio/mp3">
+                </audio>
+
             </div>
+
+
         </div>
-		<script src="Java script/app_music_player.js"></script>
-    </body>
-   
+    </div>
+    <script src="Java script/app_music_player.js">
+
+
+
+    </script>
+</body>
+
 </html>
