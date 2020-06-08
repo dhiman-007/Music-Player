@@ -50,6 +50,10 @@ const next = () => {
     }
 }
 
+document.getElementById("my-audio").addEventListener('ended', ()=>{
+    next()
+})
+
 
 const bomb = (songName, ind) => {
 	console.log(pics)
