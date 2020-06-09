@@ -78,11 +78,13 @@ const bomb = (songName, ind) => {
 }
 
 window.addEventListener("offline", () => {
+    
     function repeat() {
+        document.getElementById('main').style.display='none'
         alert('checck your internet connectivity')
         setTimeout(() => {
             repeat()
-        }, 2500)
+        }, 1000)
     }
     repeat()
 
@@ -90,6 +92,7 @@ window.addEventListener("offline", () => {
 
 window.addEventListener("online", () => {
     location.reload()
+
 }, false);
 
 
