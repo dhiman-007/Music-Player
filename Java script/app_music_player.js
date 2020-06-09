@@ -8,7 +8,7 @@ let songs = ["Let em play Karan aujla.mp3","Sheikh  Karan Aujla.mp3","East Side 
     "I-Like-Me-Better.mp3"
 ];
 
-let pics 
+let pics, sum 
 
 window.onload = fill
 
@@ -21,7 +21,14 @@ function fill() {
     })
 
     document.getElementById('number').innerHTML=1 +' / '+songs.length
-	
+
+    // console.log(songs)
+    // for(let i =0 ;i <songs.length;i++){
+    //         sum+='<a href= "">' + songs[i].substring(0, songs[i].length-3) +'</a>' + '<br/><br/>'
+    // }
+    // document.getElementById('main').innerHTML=sum.toString()
+    // console.log(show)
+
 }
 
 
