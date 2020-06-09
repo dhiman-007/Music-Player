@@ -8,7 +8,7 @@ let songs = ["Let em play Karan aujla.mp3", "Sheikh  Karan Aujla.mp3", "East Sid
     "I-Like-Me-Better.mp3"
 ];
 
-let pics, sum = "", sng
+let pics, sum = "", sng, i=0
 
 window.onload = fill
 
@@ -37,13 +37,11 @@ document.getElementById('list').addEventListener('click', (e) => {
     if (e.target.tagName == 'BUTTON') {
         sng = songs[e.target.id]
         i = (parseInt)(e.target.id)
-         bomb(sng, i + 1)
+        bomb(sng, i + 1)
 
     }
 
 })
-
-let i = 0;
 
 const pre = () => {
     if (i == 0) {
@@ -77,7 +75,24 @@ const bomb = (songName, ind) => {
     document.getElementById('songTitle').innerHTML = "d'MAN" + '<br/><br/>' + songName.substring(0, songName.length - 4);
     document.getElementById('number').innerHTML = (ind) + ' / ' + songs.length
     $("#bg img").attr("src", pics[ind])
-
-
 }
+
+window.addEventListener("offline", () => {
+    function repeat() {
+        alert('checck your internet connectivity')
+        setTimeout(() => {
+            repeat()
+        }, 2500)
+    }
+    repeat()
+
+}, false);
+
+window.addEventListener("online", () => {
+    location.reload()
+}, false);
+
+
+
+
 
