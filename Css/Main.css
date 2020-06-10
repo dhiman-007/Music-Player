@@ -11,12 +11,14 @@ body{
 #main{
     width:45%;border-radius: 15px;position: absolute;top:50%;left: 35%;transform: translate(-50%,-50%);
     z-index: 999;background-color: cornflowerblue;
+    box-shadow: 10px 8px 10px 8px black;
 }
 #list{
-    width:45%;border-radius: 10px;position: absolute;top:50%;left: 130%;transform: translate(-50%,-50%);
-    ;border: 1px solid black;height:100%; background-color: white;
-    font-family: monospace; font-weight: 50%;
-    font-size: 15px;  overflow: scroll; text-align: center;
+    width:45%;position: absolute;top:50%;left: 130%;transform: translate(-50%,-50%);
+    ;height:100%; background-color:white;
+    font-family: monospace; font-weight: 80%;
+    font-size: 15px;  overflow: auto; text-align: center;
+    box-shadow: 10px 8px 10px 8px black;
 }
 #image img{
     height: 180px;width: 100%;margin-top: -5px;border-top-left-radius: 15px;border-top-right-radius: 15px;
@@ -47,25 +49,12 @@ body{
     position: absolute;top:50%;left: 50%;transform: translate(-50%,-50%);
 }
 #btn{
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    left: 40%;
+    background-color: #4CAF50; border: none; color: white; padding: 15px 32px;
+    text-align: center;font-size: 16px;margin: 4px 2px;cursor: pointer;left: 40%;
 }
 .beat{
-        background-color:cornflowerblue;
-        border: none;
-        border-radius: 10%;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
+        background-color:cornflowerblue;border: none;border-radius: 10%;color: white;padding: 10px 20px;
+        text-align: center;text-decoration: none; display: inline-block;
         margin: 4px 2px;
         cursor: pointer;
         font-size: 10px;
@@ -73,3 +62,7 @@ body{
         left: 35%;
       
 }
+.dark-mode {
+    background-color: black;
+    color: white;
+  }
