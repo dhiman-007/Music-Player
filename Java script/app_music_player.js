@@ -1,11 +1,9 @@
-        //dMAN
+														//dMAN
 
-        let songs = ["Let em play Karan aujla.mp3", "Sheikh  Karan Aujla.mp3", "East Side Flow - Sidhu Moose Wala.mp3",
-            "Sooraj-dooba-hai-remix.mp3",
-            "Daru-badnam-remix.mp3",
-            "Rock-on-title-song.mp3",
-            "woh-lamhe-woh-baatein.mp3",
-            "I-Like-Me-Better.mp3"
+
+        let songs = ["Sooraj-dooba-hai-remix.mp3", "Allah Ke Bande.mp3" ,"Chitta Kurta.mp3","Something_something.mp3",
+				"Tere karke guitar sikhda.mp3","02 Tere Mere.mp3","Old_skool.mp3","Rock-on-title-song.mp3","Outlaw.mp3","I-Like-Me-Better.mp3","Let em play Karan aujla.mp3","woh-lamhe-woh-baatein.mp3","Sheikh  Karan Aujla.mp3",
+				   
         ];
 
         let pics, sum = "", sng, i = 0
@@ -37,6 +35,7 @@
                     '<br/><br/>'
             }
             list.innerHTML = sum.toString()
+
 
         }
 
@@ -109,5 +108,3 @@
             location.reload()
 
         }, false);
-
-
