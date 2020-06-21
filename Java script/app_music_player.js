@@ -1,4 +1,4 @@
-														//dMAN
+			                        //dMAN
 
 
         let songs = ["Sooraj-dooba-hai-remix.mp3", "Allah Ke Bande.mp3" ,"Chitta Kurta.mp3","Something_something.mp3",
@@ -91,6 +91,7 @@
             $("#bg img").attr("src", pics[ind])
         }
 
+        
         window.addEventListener("offline", () => {
             song.pause()
             function repeat() {
@@ -99,7 +100,7 @@
                 setTimeout(() => {
                     repeat()
                 }, 1000)
-            }
+            }   
             repeat()
 
         }, false);
@@ -108,3 +109,5 @@
             location.reload()
 
         }, false);
+
+        
