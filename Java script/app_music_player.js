@@ -77,7 +77,7 @@
         })
 
         song.addEventListener('pause', () => {
-            $("#image img").attr("src", 'images/stat1.jpg')
+            $("#image img").attr("src", 'images/stat2.jpg')
         })
 
         song.addEventListener('play', () => {
