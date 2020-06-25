@@ -10,7 +10,7 @@ body{
 }
 #main{
     width:45%;border-radius: 15px;position: absolute;top:50%;left: 35%;transform: translate(-50%,-50%);
-    z-index: 999;background-color: cornflowerblue;
+    z-index: 999;background-color:teal;
     box-shadow: 10px 8px 10px 8px black;
 }
 #list{
@@ -24,7 +24,7 @@ body{
     height: 180px;width: 100%;margin-top: -5px;border-top-left-radius: 15px;border-top-right-radius: 15px;
 }
 #player{
-    padding: 25px;color:#333;
+    padding: 25px;color:whitesmoke;
 }
 #songTitle{
     width:300px;text-align: center;font-family: monospace;font-size: 18px;position: absolute;top:60%;
@@ -53,7 +53,7 @@ body{
     text-align: center;font-size: 16px;margin: 4px 2px;cursor: pointer;left: 40%;
 }
 .beat{
-        background-color:cornflowerblue;border: none;border-radius: 10%;
+        background-color: teal;border: none;border-radius: 10%;
         color: white;padding: 10px 20px;
         text-align: center;text-decoration: none; display: inline-block;
         margin: 4px 2px;
