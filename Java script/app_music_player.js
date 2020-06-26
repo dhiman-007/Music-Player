@@ -99,17 +99,17 @@ const bajaoPhir = (songName, ind) => {
 
 const elem = document.getElementById("search");
 
-elem.addEventListener('click', () => {
+elem.addEventListener('click', ()=>{
 
     const inputSearch = document.getElementById("inp")
-
+    
     if (inputSearch.value.length == 0) {
         alert('Type something../ Making fool?')
         return
     }
 
     songs.forEach((song, ind) => {
-        individual = song.substring(0, song.length - 4).toLowerCase()
+        individual = song.substring(0, song.length - 4).toLowerCase().replace("-", " ")
         //console.log(individual, ind)
 
         if (individual.includes(inputSearch.value.toLowerCase().trim())) {
@@ -124,15 +124,15 @@ elem.addEventListener('click', () => {
         list.innerHTML = "<h3>Not found in list</h3>"
         inputSearch.focus()
     } else {
-        setTimeout(() => {
-            list.innerHTML = addMe.toString()
-            addMe = ""
-            inputSearch.focus()
-        }, 300)
+        setTimeout(()=>{
+        list.innerHTML = addMe.toString()
+        addMe = ""
+        inputSearch.focus()
+        },300)
     }
 
 })
-
+    
 
 checkInputData = () => {
     inputSearch = document.getElementById("inp")
