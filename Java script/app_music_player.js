@@ -1,28 +1,28 @@
 //dMAN
 
 
-let songs = ["Sooraj-dooba-hai-remix.mp3",
+let songs = ["Sooraj dooba hai remix.mp3",
     "Allah Ke Bande.mp3",
     "Chitta Kurta.mp3",
     "Befikra.mp3",
-    "Sia - NGU.mp3",
+    "Sia NGU.mp3",
     "Saadi Galli Aaja(Ayushman).mp3",
     "Tere karke guitar sikhda.mp3",
     "PLAY DATE.mp3",
     "02 Tere Mere.mp3",
-    "Old_skool.mp3",
-    "DIL CHEEZ TUJHE DEDI Full Song _ AIRLIFT.mp3",
+    "Old skool.mp3",
+    "DIL CHEEZ TUJHE DEDI Full Song AIRLIFT.mp3",
     "Let em play Karan aujla.mp3",
     "Abhi Toh Party Shuru Hui Hai.mp3",
-    "Rock-on-title-song.mp3",
+    "Rock on title song.mp3",
     "Dil Dooba.mp3",
     "Outlaw.mp3",
-    "I-Like-Me-Better.mp3",
-    "woh-lamhe-woh-baatein.mp3",
+    "I Like Me Better.mp3",
+    "woh lamhe woh baatein.mp3",
     "Sheikh  Karan Aujla.mp3",
 ];
 
-let pics, sum = "", sng, i = 0, individual, addMe = "", track = 0
+let pics, sum = "", sng, i = 0, individual, addMe = ""
 
 const song = document.getElementById('my-audio')
 const main = document.getElementById('main')
@@ -31,9 +31,6 @@ const number = document.getElementById('number')
 const list = document.getElementById('list')
 const songTitle = document.getElementById('songTitle')
 const checkMe = document.getElementById("inp")
-
-
-
 
 window.onload = fill
 
@@ -56,6 +53,7 @@ function fill() {
             '<br/><br/>'
     }
     list.innerHTML = sum.toString()
+    document.getElementById('inp').focus()
 
 }
 
@@ -94,14 +92,15 @@ const next = () => {
 
 const bajaoPhir = (songName, ind) => {
     song.setAttribute('src', 'music/' + songName)
-    songTitle.innerHTML = 'Dman?dhiman:demon' + '<br/><br/>' + songName.substring(0, songName.length - 4)
+    songTitle.innerHTML = 'dman/>' + '<br/><br/>' + songName.substring(0, songName.length - 4)
     number.innerHTML = (ind) + ' / ' + songs.length
     $("#bg img").attr("src", pics[ind])
 }
 
+const elem = document.getElementById("search");
 
-const searchMe = () => {
-    track++
+elem.addEventListener('click', () => {
+
     const inputSearch = document.getElementById("inp")
 
     if (inputSearch.value.length == 0) {
@@ -125,18 +124,19 @@ const searchMe = () => {
         list.innerHTML = "<h3>Not found in list</h3>"
         inputSearch.focus()
     } else {
-
-        list.innerHTML = addMe.toString()
-        addMe = ""
-        inputSearch.focus()
-
+        setTimeout(() => {
+            list.innerHTML = addMe.toString()
+            addMe = ""
+            inputSearch.focus()
+        }, 300)
     }
 
-}
+})
+
 
 checkInputData = () => {
     inputSearch = document.getElementById("inp")
-    if (inputSearch.value.length == 0 && track >= 1) {
+    if (inputSearch.value.length == 0) {
         list.innerHTML = sum.toString();
     }
 
