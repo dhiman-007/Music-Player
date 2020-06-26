@@ -109,7 +109,7 @@ elem.addEventListener('click', () => {
     }
 
     songs.forEach((song, ind) => {
-        individual = song.substring(0, song.length - 4).toLowerCase().replace("-", " ")
+        individual = song.substring(0, song.length - 4).toLowerCase()
         //console.log(individual, ind)
 
         if (individual.includes(inputSearch.value.toLowerCase().trim())) {
