@@ -3,27 +3,42 @@
 <head>
     <link href="Css/Main.css" rel="stylesheet" />
     <script src="Css/jquery-1.10.2.min.js"></script>
-  
+
 </head>
 
 <body>
-    
+
     <div id="bg">
         <img src="images/Poster1.jpg" />
     </div>
 
+
     <div id="main">
+
+
 
         <div id="image">
             <img id="gift" src="images/static.jpg" />
         </div>
-        <div id="list"></div>
+
+
+
+        <div id="list">
+        </div>
+
+
+        <div align="center" id="search-div" style="position: absolute; bottom: 99%; left: 110%;">
+            <h3 style="color: white; font-family: monospace; font-size: 140%;">Search a song</h3>
+            <input type="text" id="inp" placeholder="Type keyword..." oninput="checkInputData()" autocomplete="off" />
+            <button onclick="searchMe()" id="search">Search</button>
+        </div>
+
         <div id="player">
 
             <div id="songTitle" style="position: absolute; top: 220px; font-size: 15px; font-family: Verdana, Geneva, Tahoma, sans-serif;
                 font-weight: 600;
                 ">
-                d'MAN<br/> <br/>Sooraj-dooba-hai-remix</div>
+                d'MAN<br /> <br />Sooraj-dooba-hai-remix</div>
             <br /><br />
             <div id="buttons">
                 <button id="pre" onclick="pre()"><img src="buttons/Pre.png" height="80%" width="80%" /></button>
@@ -37,7 +52,8 @@
 
             </div>
         </div>
-      
+
+
     </div>
     <script src="Java script/app_music_player.js"> </script>
 

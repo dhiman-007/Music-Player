@@ -22,7 +22,7 @@ let songs = ["Sooraj-dooba-hai-remix.mp3",
     "Sheikh  Karan Aujla.mp3",
 ];
 
-let pics, sum = "", sng, i = 0
+let pics, sum = "", sng, i = 0, individual, addMe = "", track = 0
 
 const song = document.getElementById('my-audio')
 const main = document.getElementById('main')
@@ -30,10 +30,15 @@ const giphyt = document.getElementById('gift')
 const number = document.getElementById('number')
 const list = document.getElementById('list')
 const songTitle = document.getElementById('songTitle')
+const checkMe = document.getElementById("inp")
+
+
+
 
 window.onload = fill
 
 function fill() {
+
     pics = songs.map((el, ind) => {
         if (ind % 3 == 0) {
             j = 0
@@ -51,7 +56,6 @@ function fill() {
             '<br/><br/>'
     }
     list.innerHTML = sum.toString()
-
 
 }
 
@@ -88,18 +92,6 @@ const next = () => {
     }
 }
 
-song.addEventListener('ended', () => {
-    next()
-})
-
-song.addEventListener('pause', () => {
-    $("#image img").attr("src", 'images/stat2.jpg')
-})
-
-song.addEventListener('play', () => {
-    $("#image img").attr("src", 'images/move9.gif')
-})
-
 const bajaoPhir = (songName, ind) => {
     song.setAttribute('src', 'music/' + songName)
     songTitle.innerHTML = 'Dman?dhiman:demon' + '<br/><br/>' + songName.substring(0, songName.length - 4)
@@ -107,6 +99,62 @@ const bajaoPhir = (songName, ind) => {
     $("#bg img").attr("src", pics[ind])
 }
 
+
+const searchMe = () => {
+    track++
+    const inputSearch = document.getElementById("inp")
+
+    if (inputSearch.value.length == 0) {
+        alert('Type something../ Making fool?')
+        return
+    }
+
+    songs.forEach((song, ind) => {
+        individual = song.substring(0, song.length - 4).toLowerCase().replace("-", " ")
+        //console.log(individual, ind)
+
+        if (individual.includes(inputSearch.value.toLowerCase().trim())) {
+            addMe += '<br/><br/>' + individual + '<br/><br/>' +
+                '<button class ="beat" id=' + ind + '>' + 'Play' + '</button>' +
+                '<br/><br/>'
+
+        }
+    })
+
+    if (addMe.length == "") {
+        list.innerHTML = "<h3>Not found in list</h3>"
+        inputSearch.focus()
+    } else {
+
+        list.innerHTML = addMe.toString()
+        addMe = ""
+        inputSearch.focus()
+
+    }
+
+}
+
+checkInputData = () => {
+    inputSearch = document.getElementById("inp")
+    if (inputSearch.value.length == 0 && track >= 1) {
+        list.innerHTML = sum.toString();
+    }
+
+}
+
+song.addEventListener('ended', () => {
+    next()
+})
+
+
+song.addEventListener('pause', () => {
+    $("#image img").attr("src", 'images/stat2.jpg')
+})
+
+
+song.addEventListener('play', () => {
+    $("#image img").attr("src", 'images/move9.gif')
+})
 
 window.addEventListener("offline", () => {
     song.pause()
@@ -121,8 +169,8 @@ window.addEventListener("offline", () => {
 
 }, false);
 
+
 window.addEventListener("online", () => {
     location.reload()
 
 }, false);
-

@@ -9,10 +9,9 @@ body{
     transform: translate(-50%,-50%);z-index: 1;
 }
 #main{
-    width:45%;border-radius: 15px;position: absolute;top:50%;left: 35%;transform: translate(-50%,-50%);
+    width:45%;border-radius: 15px;position: absolute;top:60%;left: 35%;transform: translate(-50%,-50%);
     z-index: 999;background-color:teal;
-    box-shadow: 10px 8px 10px 8px black;
-}
+    box-shadow: 20px 20px 10px black;}
 #list{
     width:45%;position: absolute;top:50%;left: 130%;transform: translate(-50%,-50%);
     ;height:100%; background-color:white;
@@ -70,3 +69,21 @@ body{
 
 }
 
+#search{
+background-color:teal;
+border: 1px solid white;
+color: white;
+padding: 5px 8px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 8px 4px;
+cursor: pointer;
+}
+
+#inp{
+    border: 2px solid black;
+    padding: 10px 15px ;
+
+}
