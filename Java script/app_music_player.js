@@ -30,7 +30,6 @@ const giphyt = document.getElementById('gift')
 const number = document.getElementById('number')
 const list = document.getElementById('list')
 const songTitle = document.getElementById('songTitle')
-const checkMe = document.getElementById("inp")
 
 window.onload = fill
 
@@ -97,20 +96,14 @@ const bajaoPhir = (songName, ind) => {
     $("#bg img").attr("src", pics[ind])
 }
 
-const elem = document.getElementById("search");
 
-elem.addEventListener('click', ()=>{
+checkInputDataAndRespond = () => {
 
     const inputSearch = document.getElementById("inp")
-    
-    if (inputSearch.value.length == 0) {
-        alert('Type something../ Making fool?')
-        return
-    }
 
+    
     songs.forEach((song, ind) => {
-        individual = song.substring(0, song.length - 4).toLowerCase().replace("-", " ")
-        //console.log(individual, ind)
+        individual = song.substring(0, song.length - 4).toLowerCase()
 
         if (individual.includes(inputSearch.value.toLowerCase().trim())) {
             addMe += '<br/><br/>' + individual + '<br/><br/>' +
@@ -121,25 +114,25 @@ elem.addEventListener('click', ()=>{
     })
 
     if (addMe.length == "") {
+
         list.innerHTML = "<h3>Not found in list</h3>"
         inputSearch.focus()
+
     } else {
-        setTimeout(()=>{
+        
         list.innerHTML = addMe.toString()
         addMe = ""
         inputSearch.focus()
-        },300)
     }
 
-})
+    checkingMyInputValue(inputSearch.value.length)
+}
+
+const checkingMyInputValue = (julyOn)=>{
     
-
-checkInputData = () => {
-    inputSearch = document.getElementById("inp")
-    if (inputSearch.value.length == 0) {
-        list.innerHTML = sum.toString();
+    if (julyOn == 0) {
+        list.innerHTML = sum.toString()
     }
-
 }
 
 song.addEventListener('ended', () => {
