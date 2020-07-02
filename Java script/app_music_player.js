@@ -109,7 +109,7 @@ const random = () =>{
 checkInputDataAndRespond = () => {
 
     const inputSearch = document.getElementById("inp")
-    q
+
     songs.forEach((song, ind) => {
         individual = song.substring(0, song.length - 4).toLowerCase()
 
