@@ -22,7 +22,7 @@ let songs = ["Sooraj dooba hai remix.mp3",
     "Sheikh  Karan Aujla.mp3",
 ];
 
-let pics, sum = "", sng, i = 0, individual, addMe = ""
+let pics, sum = "", sng, i = 0, individual, addMe = "", min=1, max=songs.length
 
 const song = document.getElementById('my-audio')
 const main = document.getElementById('main')
@@ -91,17 +91,25 @@ const next = () => {
 
 const bajaoPhir = (songName, ind) => {
     song.setAttribute('src', 'music/' + songName)
+
     songTitle.innerHTML = 'dman/>' + '<br/><br/>' + songName.substring(0, songName.length - 4)
     number.innerHTML = (ind) + ' / ' + songs.length
     $("#bg img").attr("src", pics[ind])
+}
+
+const random = () =>{
+    
+    let random = Math.round(Math.random() * (max - min) + min)
+    bajaoPhir(songs[random], random+1)
+
+
 }
 
 
 checkInputDataAndRespond = () => {
 
     const inputSearch = document.getElementById("inp")
-
-    
+    q
     songs.forEach((song, ind) => {
         individual = song.substring(0, song.length - 4).toLowerCase()
 
@@ -119,7 +127,7 @@ checkInputDataAndRespond = () => {
         inputSearch.focus()
 
     } else {
-        
+
         list.innerHTML = addMe.toString()
         addMe = ""
         inputSearch.focus()
@@ -128,8 +136,8 @@ checkInputDataAndRespond = () => {
     checkingMyInputValue(inputSearch.value.length)
 }
 
-const checkingMyInputValue = (julyOn)=>{
-    
+const checkingMyInputValue = (julyOn) => {
+
     if (julyOn == 0) {
         list.innerHTML = sum.toString()
     }
@@ -167,3 +175,4 @@ window.addEventListener("online", () => {
     location.reload()
 
 }, false);
+
