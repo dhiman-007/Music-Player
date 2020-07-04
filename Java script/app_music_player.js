@@ -5,6 +5,7 @@ let songs = ["Sooraj dooba hai remix.mp3",
     "Allah Ke Bande.mp3",
     "Chitta Kurta.mp3",
     "Befikra.mp3",
+	"Munde Pind De.mp3",
     "Sia NGU.mp3",
     "Saadi Galli Aaja(Ayushman).mp3",
     "Tere karke guitar sikhda.mp3",
@@ -101,8 +102,6 @@ const random = () =>{
     
     let random = Math.round(Math.random() * (max - min) + min)
     bajaoPhir(songs[random], random+1)
-
-
 }
 
 
