@@ -50,9 +50,9 @@ function fill() {
     sum += '<h2 style="color:teal">' + 'Songs(' + songs.length + ')</h2>' + '<br/>'
 
     for (let i = 0; i < songs.length; i++) {
-        sum += '<br/>' + songs[i].substring(0, songs[i].length - 4) + '<br/><br/>' +
+        sum += '<br/><br/>' + songs[i].substring(0, songs[i].length - 4) + '<br/><br/>' +
             '<button class ="beat" id=' + i + '>' + 'Play' + '</button>' +
-            '<br/><br/>'
+            '<br/><br/><br/>'+ '---------------------'
     }
     list.innerHTML = sum.toString()
     document.getElementById('inp').focus()
@@ -115,16 +115,19 @@ checkInputDataAndRespond = () => {
         individual = song.substring(0, song.length - 4).toLowerCase()
 
         if (individual.includes(inputSearch.value.toLowerCase().trim())) {
-            addMe += '<br/><br/>' + individual + '<br/><br/>' +
+            addMe += '<br/><br/>' + individual + '<br/>' +
                 '<button class ="beat" id=' + ind + '>' + 'Play' + '</button>' +
                 '<br/><br/>'
 
         }
-    })
+    });
 
     if (addMe.length == "") {
 
-        list.innerHTML = "<h3>Not found in list</h3>"
+        list.innerHTML = 
+        "<h3>Not found in list</h3><br/>"
+        // "Check this link<br/><br/>"
+        //  "<a href=https://www.google.com/search?q="+inputSearch.value+">"+"click</a>"
         inputSearch.focus()
 
     } else {
