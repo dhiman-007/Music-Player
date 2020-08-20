@@ -5,9 +5,9 @@ let songs = ["Sooraj dooba hai remix.mp3",
     "Allah Ke Bande.mp3",
     "Chitta Kurta.mp3",
     "Befikra.mp3",
-	"Munde Pind De.mp3",
-	"Thandi Hawa (Lost Stories) @ ritwiz.mp3",
-	"SANJU  Sidhu Moose Wala.mp3",
+    "Munde Pind De.mp3",
+    "Thandi Hawa (Lost Stories) @ ritwiz.mp3",
+    "SANJU  Sidhu Moose Wala.mp3",
     "Sia NGU.mp3",
     "Saadi Galli Aaja(Ayushman).mp3",
     "Tere karke guitar sikhda.mp3",
@@ -25,7 +25,7 @@ let songs = ["Sooraj dooba hai remix.mp3",
     "Sheikh  Karan Aujla.mp3",
 ];
 
-let pics, sum = "", sng, i = 0, individual, addMe = "", min=1, max=songs.length
+let pics, sum = "", sng, i = 0, individual, addMe = "", min = 1, max = songs.length
 
 const song = document.getElementById('my-audio')
 const main = document.getElementById('main')
@@ -37,6 +37,7 @@ const songTitle = document.getElementById('songTitle')
 window.onload = fill
 
 function fill() {
+    console.log("Hello/////////////////");
 
     pics = songs.map((el, ind) => {
         if (ind % 3 == 0) {
@@ -52,7 +53,7 @@ function fill() {
     for (let i = 0; i < songs.length; i++) {
         sum += '<br/><br/>' + songs[i].substring(0, songs[i].length - 4) + '<br/><br/>' +
             '<button class ="beat" id=' + i + '>' + 'Play' + '</button>' +
-            '<br/><br/><br/>'+ '---------------------'
+            '<br/><br/><br/>' + '---------------------'
     }
     list.innerHTML = sum.toString()
     document.getElementById('inp').focus()
@@ -100,10 +101,10 @@ const bajaoPhir = (songName, ind) => {
     $("#bg img").attr("src", pics[ind])
 }
 
-const random = () =>{
-    
+const random = () => {
+
     let random = Math.round(Math.random() * (max - min) + min)
-    bajaoPhir(songs[random], random+1)
+    bajaoPhir(songs[random], random + 1)
 }
 
 
@@ -124,8 +125,8 @@ checkInputDataAndRespond = () => {
 
     if (addMe.length == "") {
 
-        list.innerHTML = 
-        "<h3>Not found in list</h3><br/>"
+        list.innerHTML =
+            "<h3>Not found in list</h3><br/>"
         // "Check this link<br/><br/>"
         //  "<a href=https://www.google.com/search?q="+inputSearch.value+">"+"click</a>"
         inputSearch.focus()
@@ -158,7 +159,7 @@ song.addEventListener('pause', () => {
 
 
 song.addEventListener('play', () => {
-    $("#image img").attr("src", 'images/move9.gif')
+    $("#image img").attr("src", 'images/static1.jpg')
 })
 
 window.addEventListener("offline", () => {
@@ -180,3 +181,4 @@ window.addEventListener("online", () => {
 
 }, false);
 
+console.log("main");
