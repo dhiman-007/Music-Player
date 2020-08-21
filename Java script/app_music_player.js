@@ -3,6 +3,7 @@
 
 let songs = ["Sooraj dooba hai remix.mp3",
     "Allah Ke Bande.mp3",
+	"Clash Diljit dosanjh.mp3",
     "Chitta Kurta.mp3",
     "Befikra.mp3",
     "Munde Pind De.mp3",
@@ -25,6 +26,12 @@ let songs = ["Sooraj dooba hai remix.mp3",
     "Sheikh  Karan Aujla.mp3",
 ];
 
+
+
+
+
+
+
 let pics, sum = "", sng, i = 0, individual, addMe = "", min = 1, max = songs.length
 
 const song = document.getElementById('my-audio')
@@ -37,7 +44,7 @@ const songTitle = document.getElementById('songTitle')
 window.onload = fill
 
 function fill() {
-    console.log("Hello/////////////////");
+   
 
     pics = songs.map((el, ind) => {
         if (ind % 3 == 0) {
@@ -84,12 +91,10 @@ const next = () => {
     if (i == songs.length - 1) {
         i = 0
         bajaoPhir(songs[i], i + 1)
-
     }
     else {
         i++
         bajaoPhir(songs[i], i + 1)
-
     }
 }
 
@@ -180,5 +185,3 @@ window.addEventListener("online", () => {
     location.reload()
 
 }, false);
-
-console.log("main");
