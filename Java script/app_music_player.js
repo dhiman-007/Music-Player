@@ -171,7 +171,7 @@ window.addEventListener("offline", () => {
     song.pause()
     function repeat() {
         main.style.display = 'none'
-        alert('checck your internet connectivity')
+        alert('check your internet connectivity')
         setTimeout(() => {
             repeat()
         }, 1000)
