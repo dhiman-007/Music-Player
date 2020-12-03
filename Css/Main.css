@@ -79,7 +79,7 @@ margin: 8px 4px;
 cursor: pointer;
 }
 
-#inp{
+#inp,#inp1{
     border: 2px solid teal;
     padding: 10px 15px ;
     border-radius: 10px;

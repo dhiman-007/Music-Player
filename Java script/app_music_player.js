@@ -3,7 +3,7 @@
 
 let songs = ["Sooraj dooba hai remix.mp3",
     "Allah Ke Bande.mp3",
-	"Clash Diljit dosanjh.mp3",
+    "Clash Diljit dosanjh.mp3",
     "Chitta Kurta.mp3",
     "Befikra.mp3",
     "Munde Pind De.mp3",
@@ -27,11 +27,6 @@ let songs = ["Sooraj dooba hai remix.mp3",
 ];
 
 
-
-
-
-
-
 let pics, sum = "", sng, i = 0, individual, addMe = "", min = 1, max = songs.length
 
 const song = document.getElementById('my-audio')
@@ -44,7 +39,6 @@ const songTitle = document.getElementById('songTitle')
 window.onload = fill
 
 function fill() {
-   
 
     pics = songs.map((el, ind) => {
         if (ind % 3 == 0) {
@@ -62,6 +56,7 @@ function fill() {
             '<button class ="beat" id=' + i + '>' + 'Play' + '</button>' +
             '<br/><br/><br/>' + '---------------------'
     }
+
     list.innerHTML = sum.toString()
     document.getElementById('inp').focus()
 
@@ -72,9 +67,7 @@ list.addEventListener('click', (e) => {
         sng = songs[e.target.id]
         i = (parseInt)(e.target.id)
         bajaoPhir(sng, i + 1)
-
     }
-
 })
 
 const pre = () => {
@@ -107,54 +100,61 @@ const bajaoPhir = (songName, ind) => {
 }
 
 const random = () => {
-
     let random = Math.round(Math.random() * (max - min) + min)
     bajaoPhir(songs[random], random + 1)
 }
 
 
 checkInputDataAndRespond = () => {
-
     const inputSearch = document.getElementById("inp")
-
     songs.forEach((song, ind) => {
         individual = song.substring(0, song.length - 4).toLowerCase()
-
         if (individual.includes(inputSearch.value.toLowerCase().trim())) {
             addMe += '<br/><br/>' + individual + '<br/>' +
                 '<button class ="beat" id=' + ind + '>' + 'Play' + '</button>' +
                 '<br/><br/>'
-
         }
     });
 
     if (addMe.length == "") {
-
         list.innerHTML =
             "<h3>Not found in list</h3><br/>"
         // "Check this link<br/><br/>"
         //  "<a href=https://www.google.com/search?q="+inputSearch.value+">"+"click</a>"
         inputSearch.focus()
-
-    } else {
-
+    }
+    else {
         list.innerHTML = addMe.toString()
         addMe = ""
         inputSearch.focus()
     }
-
     checkingMyInputValue(inputSearch.value.length)
 }
 
 const checkingMyInputValue = (julyOn) => {
-
     if (julyOn == 0) {
         list.innerHTML = sum.toString()
     }
 }
 
+// Will Implement On the Fly Logic, Once I will get Time
+// const matchYoutubeUrl = () => {
+//     let url = document.getElementById("inp1").value;
+//     if(url.length == 0) {
+//         alert('Please Provide valid Input');
+//         return false;
+//     }
+//     alert(url);
+//     let p = /^(?:https?:\/\/)?(?:m\.|www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+//     if(url.match(p)){
+        
+//     }
+//     return false;
+// }
+
+
 song.addEventListener('ended', () => {
-    next()
+    next();
 })
 
 
@@ -177,11 +177,9 @@ window.addEventListener("offline", () => {
         }, 1000)
     }
     repeat()
-
 }, false);
 
 
 window.addEventListener("online", () => {
     location.reload()
-
 }, false);
