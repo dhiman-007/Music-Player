@@ -94,7 +94,7 @@ const next = () => {
 const bajaoPhir = (songName, ind) => {
     song.setAttribute('src', 'music/' + songName)
 
-    songTitle.innerHTML = 'daemon' + '<br/><br/>' + songName.substring(0, songName.length - 4)
+    songTitle.innerHTML = 'Daemon' + '<br/><br/>' + songName.substring(0, songName.length - 4)
     number.innerHTML = (ind) + ' / ' + songs.length
     $("#bg img").attr("src", pics[ind])
 }
