@@ -27,7 +27,7 @@ let songs = ["Sooraj dooba hai remix.mp3",
 ];
 
 
-let pics, sum = "", sng, i = 0, individual, addMe = "", min = 1, max = songs.length
+let pics, sum = "", sng, i = 0, individual, addMe = "", min = 1, max = songs.length;
 
 const song = document.getElementById('my-audio')
 const main = document.getElementById('main')
@@ -94,7 +94,7 @@ const next = () => {
 const bajaoPhir = (songName, ind) => {
     song.setAttribute('src', 'music/' + songName)
 
-    songTitle.innerHTML = 'Daemon' + '<br/><br/>' + songName.substring(0, songName.length - 4)
+    songTitle.innerHTML = 'Lets VIBE' + '<br/><br/>' + songName.substring(0, songName.length - 4)
     number.innerHTML = (ind) + ' / ' + songs.length
     $("#bg img").attr("src", pics[ind])
 }
