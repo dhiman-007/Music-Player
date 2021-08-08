@@ -47,6 +47,8 @@ function fill() {
         return "images/Poster" + (++j) + ".jpg"
     })
 
+    //console.log(pics);
+
     number.innerHTML = 1 + ' / ' + songs.length
 
     sum += '<h2 style="color:teal">' + 'Songs(' + songs.length + ')</h2>' + '<br/>'
@@ -93,10 +95,10 @@ const next = () => {
 
 const bajaoPhir = (songName, ind) => {
     song.setAttribute('src', 'music/' + songName)
-
+    //console.log(ind);
     songTitle.innerHTML = 'Lets VIBE' + '<br/><br/>' + songName.substring(0, songName.length - 4)
     number.innerHTML = (ind) + ' / ' + songs.length
-    $("#bg img").attr("src", pics[ind])
+    $("#bg img").attr("src", pics[ind-1])
 }
 
 const random = () => {
@@ -136,22 +138,6 @@ const checkingMyInputValue = (julyOn) => {
         list.innerHTML = sum.toString()
     }
 }
-
-// Will Implement On the Fly Logic, Once I will get Time
-// const matchYoutubeUrl = () => {
-//     let url = document.getElementById("inp1").value;
-//     if(url.length == 0) {
-//         alert('Please Provide valid Input');
-//         return false;
-//     }
-//     alert(url);
-//     let p = /^(?:https?:\/\/)?(?:m\.|www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
-//     if(url.match(p)){
-        
-//     }
-//     return false;
-// }
-
 
 song.addEventListener('ended', () => {
     next();
